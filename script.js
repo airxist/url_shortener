@@ -34,6 +34,18 @@ const html = () => {
                 <p class="shortened_url">${object.shortlink}</p>
                 <button class="copy" type="button">Copy</button>
             </article>`
+    const copy_btn = document.querySelectorAll(".copy");
+
+    copy_btn.forEach(copied => {
+        copied.addEventListener("click", e=> {
+            e.currentTarget.classList.add("copied")
+            e.currentTarget.textContent = "copied"
+            element = e.currentTarget.previousSibling.previousSibling;
+            let link = element.textContent;
+            navigator.clipboard.writeText(link)
+        })
+    })
+    setDefault();
 }
 const validate = e => {
     e.preventDefault();
