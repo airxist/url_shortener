@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+  <!-- external styling -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- external script -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <heading class="master">
+    <!-- logo -->
+    <span class="logo_holder">
+      <img src="images/logo.svg" alt="logo" class="logo">
+    </span>
+    <!-- navigation -->
+    <nav class="compass">
+      <ul class="co-ordinates">
+        <li class="point"><a href="#">Features</a></li>
+        <li class="point"><a href="#">Pricing</a></li>
+        <li class="point"><a href="#">Resources</a></li>
+      </ul>
+      <!-- the login and sign up -->
+      <button class="login" type="button">Login</button>
+      <button class="sign" type="button">Sign Up</button>
+    </nav>
+
+    <span class="menu_holder">
+      <img src="images/menu.svg" alt="menu" class="menu">
+    </span>
+  </heading>
+
+  <main class="bodiment">
+    <!-- illustration, pictogram and main title -->
+    <section class="illustration">
+      <article class="illu_detail">
+        <h1 class="illu_title">
+          More than just shorter links
+        </h1>
+
+        <p class="illu_text">
+          Build your brand's recognition and get detailed
+          insights on how your links are performing.
+        </p>
+
+        <button type="button" class="get_started">Get Started</button>
+      </article>
+      <figure class="illu_pic">
+        <img src="images/illustration-working.svg" class="illu_img" alt="image of working" loading="lazy">
+      </figure>
+    </section>
+
+    <section class="render_service">
+
+      <div class="everything_form_and_output">
+        <!-- form to get user input/url to be shortened -->
+        <form action="" class="shorten_form">
+          <!-- bg for the form -->
+          <picture class="bg_form">
+            <source media="(max-width: 768px)" srcset="images/bg-shorten-mobile.svg">
+            <img src="images/bg-shorten-desktop.svg" alt="bg for desktop">
+          </picture>
+  
+          <div class="shorten_wrap">
+            <section class="shortener">
+              <input type="text" name="shortener" class="shorten_text" placeholder="Shorten a link here">
+              <input type="submit" value="Shorten It!" class="shorten_submit">
+              <output class="alert"></output>
+            </section>
+          </div>
+        </form>
+        <!-- the links that has been shortened container -->
+        <div class="url_container">
+          
+        </div>
+      </div>
+
+      <article class="services">
+        <!-- service detail -->
+        <section class="services_details">
+          <h2 class="service_title">
+            Advanced Statistics
+          </h2>
+          <summary class="service_summary">
+            Track how your links are performing across the web with
+            our advanced statistics dashboard.
+          </summary>
+        </section>
+
+        <section class="services_log">
+          <div class="line"></div>
+          <fieldset class="service">
+            <legend class="service_pictogram">
+              <img src="images/icon-brand-recognition.svg" alt="">
+            </legend>
+
+            <h3 class="serve_title">
+              Brand Recognition
+            </h3>
+
+            <p class="serve_text">
+              Boost your brand recognition with each click, Generic links don't
+              mean a thing. Branded links help instil confidence in your content.
+            </p>
+          </fieldset>
+
+          <fieldset class="service second">
+            <legend class="service_pictogram">
+              <img src="images/icon-detailed-records.svg" alt="">
+            </legend>
+
+            <h3 class="serve_title">
+              Detailed Records
+            </h3>
+
+            <p class="serve_text">
+              Gain insights into who is clicking your links. Knowing when and where 
+              people engage with your content helps inform better decisions.
+            </p>
+          </fieldset>
+
+          <fieldset class="service third">
+            <legend class="service_pictogram">
+              <img src="images/icon-fully-customizable.svg" alt="">
+            </legend>
+
+            <h3 class="serve_title">
+              Fully Customizable
+            </h3>
+
+            <p class="serve_text">
+              Improve brand awareness and content discoverability through customizable 
+              links, supercharging audience engagement.
+            </p>
+          </fieldset>
+        </section>
+      </article>
+
+      <section class="boost">
+        <h2 class="boost_title">
+          <marquee behavior="awareness" direction="right">
+            Boost your links today
+          </marquee>
+        </h2>
+  
+        <button class="get_started">Get Started</button>
+      </section>
+
+    </section>
+
+  </main>
+  <footer class="endpoint">
+    <div class="endpoint_wrap">
+      <div class="logoholder">
+        <img src="images/logo.svg" alt="logo" class="end_logo">
+      </div>
+
+      <address>
+        <div class="features">
+          <h3 class="feat">Features</h3>
+          <ul class="unorderlist">
+            <li class="linkage"><a href="">Url Shortening</a></li>
+            <li class="linkage"><a href="">Branded Links</a></li>
+            <li class="linkage"><a href="">Analytics</a></li>
+          </ul>
+        </div>
+        <div class="source">
+          <h3 class="resource">Resources</h3>
+          <ul class="unorderlist">
+            <li class="linkage"><a href="">Blog</a></li>
+            <li class="linkage"><a href="">Developers</a></li>
+            <li class="linkage"><a href="">Support</a></li>
+          </ul>
+        </div>
+        <div class="Company">
+          <h3 class="comp">Company</h3>
+          <ul class="unorderlist">
+            <li class="linkage"><a href="">About</a></li>
+            <li class="linkage"><a href="">Our Team</a></li>
+            <li class="linkage"><a href="">Careers</a></li>
+            <li class="linkage"><a href="">Contacts</a></li>
+          </ul>
+        </div>
+      </address>
+
+      <div class="social_connect">
+        <img src="images/icon-facebook.svg" alt="">
+        <img src="images/icon-twitter.svg" alt="">
+        <img src="images/icon-pinterest.svg" alt="">
+        <img src="images/icon-instagram.svg" alt="">
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
