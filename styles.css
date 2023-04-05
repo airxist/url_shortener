@@ -587,3 +587,19 @@ address div h3 {
 .safezoneline {
     border: 3px solid lightgreen;
 }
+/* SCROLL BAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--Dark-Violet);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--Cyan);
+    border: solid 2px var(--Dark-Violet);
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: white;
+}

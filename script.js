@@ -8,7 +8,7 @@ const root = document.querySelector(":root");
 const url_container = document.querySelector(".url_container");
 
 // OPTIONS OR CONDITIONS
-
+// let pausepage = false, currentpage;
 // FUNCTIONS
 const open_menu = () => menu.classList.toggle("show_menu");
 const setDefault = () => user_url.value = "";
@@ -53,22 +53,28 @@ const validate = e => {
 
     if(!value) {
         displayAlert( "please add a link!", "danger", "dangerline", "red" );
-    } else {
-        getFile(value);
-        displayAlert( "Wait, we working on it!", "safezone", "safezoneline", "lightgreen" );
+    } else if (value) {
+        let chek = value.indexOf(".com");
+        if(chek < 0) {
+            displayAlert( "input is not a valid link!", "danger", "dangerline", "red" );
+            setDefault();
+        }else {
+            displayAlert( "Wait, we working on it!", "safezone", "safezoneline", "lightgreen" );
+            getFile(value);
+            setDefault();
+        } 
     }
-
 }
-let y;
+let feedback;
 // HOISTING FUNCTIONS 
 function getFile(value) {
     let url = `https://api.shrtco.de/v2/shorten?url=${value}`;
     fetch(url)
     .then(res => res.json())
-    .then(data => y=data)
+    .then(data => feedback = data)
     .then(() => {
-        let shortlink = y.result.short_link;
-        let original = y.result.original_link;
+        let shortlink = feedback.result.short_link;
+        let original = feedback.result.original_link;
         return object = {shortlink, original}
     })
     .finally(() => {
@@ -85,16 +91,12 @@ function getFile(value) {
             url_container.removeChild(arr_of_children[0]);
 
            html();
-        }else{
-            let chek = value.indexOf(".com");
-            if(chek < 0) {
-                displayAlert( "input is not a valid link!", "danger", "dangerline", "red" );
-            }else{
-                html();
-            }
+        }else {
+            html();
         }
     })
 }
 // EVENT LISTENER 
 menu_btn.addEventListener("click", open_menu);
 form.addEventListener("submit", validate);
+window.addEventListener("scroll", () => menu.classList.remove("show_menu"));
